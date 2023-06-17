@@ -1,0 +1,72 @@
+name: Ubuntu RDP
+
+on:
+  workflow_dispatch:
+    inputs:
+      hostname:
+        description: 'Enter Hostname:'
+        required: true
+        default: Ubuntu
+        type: string
+      username:
+        description: 'Enter Username:'
+        required: true
+        default: user
+        type: string
+      password:
+        description: 'Enter Password:'
+        required: true
+        default: root
+        type: string
+      Pin:
+        description: 'Enter a Pin (more or equal to 6 digits)'
+        required: true
+        default: 123456
+        type: number
+      CRP:
+        description: 'Visit http://remotedesktop.google.com/headless and copy the command after Authentication'
+        required: true
+        type: string
+
+env:
+  hostname: ${{ inputs.hostname }}
+  username: ${{ inputs.username }}
+  password: ${{ inputs.password }}
+  Pin: ${{ inputs.Pin }}
+  CRP: ${{ inputs.CRP }}
+
+jobs:
+  build:
+    name: Launch Ubuntu RDP Server
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
+
+    steps:
+      - name: Cleanup Junk
+        run: |
+          mkdir Cleanup_Script
+          cd Cleanup_Script
+          curl -L -o cleanup-storage-of-runneros.sh \
+              https://raw.githubusercontent.com/rokibhasansagar/slimhub_actions/main/cleanup.sh
+          chmod +x cleanup-storage-of-runneros.sh
+          ./cleanup-storage-of-runneros.sh
+ 
+      - name: Create Ubuntu RDP Server
+        run: |
+          mkdir Create_Server
+          cd Create_Server
+          curl -L -o create-ubuntu-rdp-server.sh \
+              https://raw.githubusercontent.com/Diwash0007/Ubuntu_RDP/main/Ubuntu_RDP.sh
+          chmod +x create-ubuntu-rdp-server.sh
+          ./create-ubuntu-rdp-server.sh
+
+      - name: Keep Running
+        run: |
+          mkdir Keep_Running
+          cd Keep_Running
+          curl -L -o keep-ubuntu-rdp-server-running.sh \
+              https://raw.githubusercontent.com/Diwash0007/Ubuntu_RDP/main/Keep_Running.sh
+          chmod +x keep-ubuntu-rdp-server-running.sh
+          ./keep-ubuntu-rdp-server-running.sh
