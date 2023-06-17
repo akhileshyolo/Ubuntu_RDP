@@ -16,7 +16,7 @@ This repository is designed exclusively for educational purposes. It provides re
 **Ubuntu RDP**: is an extraordinary repository that grants users a complimentary Ubuntu RDP server on GitHub's renowned hosted virtual machine, also referred to as the runner operating system (OS). Immerse yourself in a seamless experience with Ubuntu RDP, the perfect solution for unleashing the full potential of your projects. Harness the power of this exceptional offering today!
 
 ### 🤔 How to get Ubuntu RDP server ?
-To get an Ubuntu RDP server, you should know about: *How to use `GitHub's workflow` ?* If you are aware of GitHub's workflow usage you must know about: *`inputs` (that are passed to the called workflow from the caller workflow).* If you have heard of GitHub's workflow and, inputs then it will be easy for you to get started because we gonna need some required information from you via `inputs`. You must be wounding: Where is that `inputs` thing needed ?. Well, we need that "`inputs` thing" to configure following things:
+To get an Ubuntu RDP server, you should know about: *How to use `GitHub's workflow` ?* If you are aware of GitHub's workflow usage you must know about: *`inputs` (that are passed to the called workflow from the caller workflow).* If you have heard of GitHub's workflow and, *`inputs`* then it will be easy for you to get started because we gonna need some required information from you via *`inputs`*. *You must be wounding: Where is that `inputs` thing needed ?. Well, we need that "`inputs` thing" to configure following things:*
 
 | Input's field:    | Description: / Usages: / Details:                                                                    | Default values: |
 | :----------------:|:---------------------------------------------------------------------------------------------------- | :-------------: |
@@ -27,11 +27,11 @@ To get an Ubuntu RDP server, you should know about: *How to use `GitHub's workfl
 | `CRP`             | Requires a command that you have to get it from [here](http://remotedesktop.google.com/headless).    | -               |
 
 After getting knowledge about above informations, you have to follow given steps to get an Ubuntu RDP server: <br>
-**Step 1:** You have to clone or crate a fork of [`this`](https://github.com/Diwash0007/Ubuntu_RDP) repository to your GitHub's account or to your GitHub's organization account. <br>
-**Step 2:** Go to your cloned or forked repository and, navigateto to section named as `Actions` for running [`this`](.github/workflows/Ubuntu_RDP.yml) workflow. <br>
-**Step 3:** You will see a workflow called as `Ubuntu RDP` select that and, click `Run workflow` button. <br>
-**Step 3:** After that, fill all required `inputs` from previous explanation then again click `Run workflow` button to run [this](.github/workflows/Ubuntu_RDP.yml) workflow. <br>
-**Step 4:** After running and, getting success you can see your RDP at [`http://remotedesktop.google.com/headless`](http://remotedesktop.google.com/headless) and, you can access it via `Pin` that you provided during provision of `inputs` process. <br>
+**Step 1:** You have to clone or crate a fork of [`this`](https://github.com/Diwash0007/Ubuntu_RDP) repository either to your GitHub's account or to your GitHub's organization account. <br>
+**Step 2:** Go to your cloned or forked repository and, navigateto to a section named as `Actions` for running [`this`](.github/workflows/Ubuntu_RDP.yml) workflow. <br>
+**Step 3:** You will see a workflow named as `Ubuntu RDP` select that and, click `Run workflow` button. <br>
+**Step 3:** After that, you have to fill all required fields using `inputs` from my previous explanation then again click `Run workflow` button to run [this](.github/workflows/Ubuntu_RDP.yml) workflow. <br>
+**Step 4:** After running and, getting success you can see your RDP named as `Ubuntu` at [`http://remotedesktop.google.com/headless`](http://remotedesktop.google.com/headless) and, you can access it via `Pin` that you provided during provision of `inputs` process. <br>
 
 ## 📄 License:
 ```
@@ -59,4 +59,4 @@ After getting knowledge about above informations, you have to follow given steps
   - By @[rokibhasansagar](https://github.com/rokibhasansagar)
 
 ## 🤝 Support:
-Thanks for those who are using this repository. I made this repository for those who doesn't have computer like me. I spent much of my time to make this happen. So, I would appreciate if give this repository a star 🌟.
+Thanks for those who are using this repository. I made this repository for those who doesn't have computer like me. I spent much of my time to make this happen. So, I would appreciate if you give this repository a star 🌟.

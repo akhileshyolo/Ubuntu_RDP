@@ -24,7 +24,7 @@ on:
         default: 123456
         type: number
       CRP:
-        description: 'Visit http://remotedesktop.google.com/headless and copy the command after Authentication'
+        description: 'Visit at http://remotedesktop.google.com/headless and, copy the command after authentication'
         required: true
         type: string
 
