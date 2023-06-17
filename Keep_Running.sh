@@ -21,34 +21,35 @@
 
 # Display a sleeping bot
 display_sleeping_bot() {
-    echo "";
-    echo "                                        ________     ";
-    echo "                            _________  |____/  /     ";
-    echo "                __________ |_____/  /      /  /____  ";
-    echo "               |______/  /      /  /       \ /_____| ";
-    echo "                     /  /      /  /______            ";
-    echo "  _______________   /  /       \ /_______|           ";
-    echo " |               | /  /______                        ";
-    echo " | ____ | | ____ | \ /_______|                       ";
-    echo " |  (_) | | (_)  |                                   ";
-    echo " |      |_|      |                                   ";
-    echo " |     _____     |                                   ";
-    echo " |_______________|                                   ";
-    echo "";
+    echo ""
+    echo "                                        ________     "
+    echo "                            _________  |____/  /     "
+    echo "                __________ |_____/  /      /  /____  "
+    echo "               |______/  /      /  /       \ /_____| "
+    echo "                     /  /      /  /______            "
+    echo "  _______________   /  /       \ /_______|           "
+    echo " |               | /  /______                        "
+    echo " | ____ | | ____ | \ /_______|                       "
+    echo " |  (_) | | (_)  |                                   "
+    echo " |      |_|      |                                   "
+    echo " |     _____     |                                   "
+    echo " |_______________|                                   "
+    echo ""
 }
 
 # Keep alive for 5 hours
 keep_alive() {
-    local start_time="$(date +%s)";
-    local stop_time="$((start_time + 18000))";
+    local start_time=$(date +%s);
+    local stop_time=$((start_time + 18000));
     while true; do
-        if ((start_time >= stop_time); then
+        if ((start_time >= stop_time)); then
             break;
         fi
         display_sleeping_bot;
         sleep 180;
     done
+}
 
+# --- main() ---
 keep_alive;
-
-# ****************************************************************************************
+# --- end main() ---

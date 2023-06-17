@@ -110,7 +110,7 @@ finish() {
   sudo adduser $username chrome-remote-desktop;
   command="$CRP --pin=$Pin";
   sudo -u $(whoami) bash -c "$command";
-  sudo systemctl restart chrome-remote-desktop@$USER;
+  sudo systemctl restart chrome-remote-desktop@$(whoami);
   echo "--------------------------";
   echo "-- Finished Succesfully --";
   echo "--------------------------";
